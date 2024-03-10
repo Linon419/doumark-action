@@ -1,0 +1,37 @@
+# .github/workflows/douban.yml
+name: douban
+on: 
+  schedule:
+  - cron: "30 * * * *"
+
+jobs:
+  douban:
+    name: Douban mark data sync
+    runs-on: ubuntu-latest
+    steps:
+    - name: movie
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: movie
+        format: notion
+        dir: 029bc0034e1542a6b828a14676d74f4f
+        notion_token: ${{ secrets.notion_token }}
+        
+    - name: book
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: book
+        format: notion
+        dir: c99bd839e44c4d379f9aa6957fc5c742
+        notion_token: ${{ secrets.notion_token }}
+        
+    - name: music
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: music
+        format: notion
+        dir: 0532843787824bc6ab07ac6f52a0bad6
+        notion_token: ${{ secrets.notion_token }}
