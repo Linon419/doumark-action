@@ -2,7 +2,7 @@
 name: douban
 on: 
   schedule:
-  - cron: "30 * * * *"
+  - cron: "* * * * *"
 
 jobs:
   douban:
@@ -35,3 +35,27 @@ jobs:
         format: notion
         dir: 0532843787824bc6ab07ac6f52a0bad6
         notion_token: ${{ secrets.notion_token }}
+
+    - name: movie
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: movie
+        format: neodb
+        neodb_token: ${{ secrets.neodb_token }}
+
+    - name: music
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: music
+        format: neodb
+        neodb_token: ${{ secrets.neodb_token }}
+        
+    - name: music
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: music
+        format: neodb
+        neodb_token: ${{ secrets.neodb_token }}
