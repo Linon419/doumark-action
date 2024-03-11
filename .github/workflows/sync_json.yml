@@ -36,8 +36,8 @@ jobs:
         format: json
         dir: ./data/douban
 
-    - name: Checkout
-      run: git pull origin master
+    - name: Checkout22
+      run: git pull --rebase
             
   
     - name: Commit
