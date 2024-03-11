@@ -15,7 +15,7 @@ jobs:
     - name: movie
       uses: lizheming/doumark-action@master
       with:
-        id: lizheming
+        id: 162762798
         type: movie
         format: json
         dir: ./data/douban
@@ -23,9 +23,17 @@ jobs:
     - name: music
       uses: lizheming/doumark-action@master
       with:
-        id: lizheming
+        id: 162762798
         type: music
-        format: csv
+        format: json
+        dir: ./data/douban
+
+    - name: book
+      uses: lizheming/doumark-action@master
+      with:
+        id: 162762798
+        type: music
+        format: json
         dir: ./data/douban
   
     - name: Commit
