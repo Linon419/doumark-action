@@ -2,7 +2,7 @@
 name: douban_sync
 on: 
   schedule:
-  - cron: "* * * * *"
+  - cron: "30 * * * *"
 
 jobs:
   douban:
