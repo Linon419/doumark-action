@@ -35,12 +35,9 @@ jobs:
         type: book
         format: json
         dir: ./data/douban
-
-    - name: Checkout22
-      run: git pull --rebase
-            
   
     - name: Commit
+      run: git pull --rebase
       uses: EndBug/add-and-commit@v8
       with:
         message: 'chore: update douban data'
